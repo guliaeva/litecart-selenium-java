@@ -4,6 +4,16 @@
 # Log file
 *.log
 
+# Maven
+target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Local test configuration
+src/test/resources/config.properties
+
 # BlueJ files
 *.ctxt
 
