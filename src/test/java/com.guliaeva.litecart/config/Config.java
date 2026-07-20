@@ -39,6 +39,10 @@ public final class Config {
         return getRequiredProperty("admin.password");
     }
 
+    public static long getTimeoutSeconds() {
+        return Long.valueOf(getRequiredProperty("timeOutInSec"));
+    }
+
     public static String getBrowser() {
         return properties.getProperty("browser", "chrome");
     }

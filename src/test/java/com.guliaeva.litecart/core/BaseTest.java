@@ -1,7 +1,10 @@
 package com.guliaeva.litecart.core;
 
+import com.guliaeva.litecart.config.Config;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,6 +26,7 @@ public abstract class BaseTest {
     @BeforeEach
     void setUp() {
         logger.info("Starting browser");
+        System.out.println("Creating driver for browser: " + Config.getBrowser());
 
         driver = DriverFactory.createDriver();
         driver.manage().window().maximize();
